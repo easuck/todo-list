@@ -1,0 +1,12 @@
+.formWrapper{
+    margin-top: 25vh;
+    width: 500px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    border-radius: 10px;
+    background: var(--secondary-color);
+    border: none;
+}

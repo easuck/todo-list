@@ -1,6 +1,5 @@
 import styles from './taskForm.module.css';
 import {FC, useState} from 'react';
-import Task from "../task/task.tsx";
 
 const TaskForm : FC<{addTask: (task: string) => any}> = ({addTask}) => {
     const [taskText, setTaskText] = useState("");
@@ -12,7 +11,7 @@ const TaskForm : FC<{addTask: (task: string) => any}> = ({addTask}) => {
     }
 
     return (
-        <form className={styles.todoForm} onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <div className={styles.inputWrapper}>
                 <input className={styles.input} type="text" placeholder="Enter your task" value={taskText}
                 onChange={(e =>{

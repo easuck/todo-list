@@ -1,6 +1,7 @@
-import TaskForm from "./form/taskForm.tsx";
+import TaskForm from "../form/taskForm.tsx";
 import {useState} from "react";
-import Task from "./task/task.tsx";
+import Task from "../task/task.tsx";
+import styles from './formWrapper.module.css'
 
 const FormWrapper = () => {
     const [tasks, setTasks] = useState<string[]>([]);
@@ -10,7 +11,7 @@ const FormWrapper = () => {
     }
 
     return (
-        <div>
+        <div className={styles.formWrapper}>
             <TaskForm addTask={addTask}/>
             {tasks.map((text, index) =>(
                 <Task task={text} key={index}/>
