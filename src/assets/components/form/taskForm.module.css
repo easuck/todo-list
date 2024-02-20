@@ -1,0 +1,32 @@
+.todoForm{
+    width: 500px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    border-radius: 10px;
+    background: var(--secondary-color);
+    border: none;
+}
+.input{
+    border: 2px solid var(--primary-color);
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex: 1;
+    padding: 10px;
+
+}
+.todoButton{
+    border: 2px solid var(--primary-color);
+    height: 40px;
+    width: 60px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: black;
+}
+.inputWrapper{
+    display: flex;
+    justify-content: space-around;
+}
