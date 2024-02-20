@@ -11,11 +11,14 @@ const FormWrapper = () => {
     }
 
     return (
-        <div className={styles.formWrapper}>
-            <TaskForm addTask={addTask}/>
-            {tasks.map((text, index) =>(
-                <Task task={text} key={index}/>
-            ))}
+        <div className={styles.todoList}>
+            <h1 className={styles.aboveText}>What are your tasks for today?</h1>
+            <div className={styles.formWrapper}>
+                <TaskForm addTask={addTask}/>
+                {tasks.map((text, index) => (
+                    <Task task={text} key={index}/>
+                ))}
+            </div>
         </div>
     );
 }
