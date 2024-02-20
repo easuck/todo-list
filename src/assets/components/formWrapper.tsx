@@ -1,9 +1,21 @@
-import React from 'react';
-import {FC} from 'react';
+import TaskForm from "./form/taskForm.tsx";
+import {useState} from "react";
+import Task from "./task/task.tsx";
 
-const FormWrapper : FC<{title: string}> = ({title}) => {
+const FormWrapper = () => {
+    const [tasks, setTasks] = useState<string[]>([]);
+
+    const addTask = (task: string) =>{
+        setTasks([...tasks, task])
+    }
+
     return (
-        <div>{title}</div>
+        <div>
+            <TaskForm addTask={addTask}/>
+            {tasks.map((text, index) =>(
+                <Task task={text} key={index}/>
+            ))}
+        </div>
     );
 }
 

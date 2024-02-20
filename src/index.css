@@ -12,6 +12,6 @@ body{
     background: var(--primary-color);
 }
 :root{
-    --primary-color: #ca46de;
-    --secondary-color: #9118b7;
+    --secondary-color: #27166e;
+    --primary-color: #763dff;
 }

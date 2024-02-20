@@ -16,15 +16,18 @@
     border-bottom-left-radius: 10px;
     flex: 1;
     padding: 10px;
-
+    background: var(--secondary-color);
+    outline: none;
+    color: white;
 }
 .todoButton{
     border: 2px solid var(--primary-color);
     height: 40px;
-    width: 60px;
+    width: 80px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    color: black;
+    color: white;
+    background: var(--primary-color)
 }
 .inputWrapper{
     display: flex;
