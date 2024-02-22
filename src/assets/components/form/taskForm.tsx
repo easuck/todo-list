@@ -1,16 +1,24 @@
-import React from 'react';
 import styles from './taskForm.module.css';
-import Task from "../task/task.tsx";
+import {FC, useState} from 'react';
 
-function TaskForm(props) {
+const TaskForm : FC<{addTask: (task: string) => any}> = ({addTask}) => {
+    const [taskText, setTaskText] = useState("");
+
+    const handleSubmit = (e: any) =>{
+        e.preventDefault();
+        addTask(taskText);
+        setTaskText("");
+    }
+
     return (
-        <form className={styles.todoForm}>
+        <form onSubmit={handleSubmit}>
             <div className={styles.inputWrapper}>
-                <input className={styles.input} type="text" placeholder="Enter your task"/>
+                <input className={styles.input} type="text" placeholder="Enter your task" value={taskText}
+                onChange={(e =>{
+                    setTaskText(e.target.value);
+                })}/>
                 <button className={styles.todoButton} type="submit">Add task</button>
             </div>
-            <Task task={"постричься"}/>
-            <Task task={"постричься"}/>
         </form>
     );
 }

@@ -1,12 +1,13 @@
 .task{
     border: 2px solid var(--primary-color);
     height: 40px;
-    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
 }
 .icons{
     display: flex;

@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import TaskForm from "./assets/components/form/taskForm.tsx";
+import FormWrapper from "./assets/components/formWrapper/formWrapper.tsx";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <TaskForm/>
+    <FormWrapper/>
   </React.StrictMode>,
 )

@@ -1,14 +1,3 @@
-.todoForm{
-    width: 500px;
-    padding: 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-    border-radius: 10px;
-    background: var(--secondary-color);
-    border: none;
-}
 .input{
     border: 2px solid var(--primary-color);
     height: 40px;
@@ -16,15 +5,22 @@
     border-bottom-left-radius: 10px;
     flex: 1;
     padding: 10px;
-
+    background: var(--secondary-color);
+    outline: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
 }
 .todoButton{
     border: 2px solid var(--primary-color);
     height: 40px;
-    width: 60px;
+    width: 80px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    color: black;
+    color: white;
+    background: var(--primary-color);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
 }
 .inputWrapper{
     display: flex;

@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import {FC} from 'react';
 import styles from './task.module.css'
 import {FaPen, FaTrash} from 'react-icons/fa'
 
