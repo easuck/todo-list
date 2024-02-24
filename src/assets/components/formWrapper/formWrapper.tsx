@@ -39,7 +39,8 @@ const FormWrapper = () => {
                 <TaskForm addTask={addTask}/>
                 {tasks.map((task, index) => (
                     task.isEditing ? (
-                        <EditForm editTask={editTask} task={task}/>
+                        <EditForm key={index} editTask={editTask} task={task} /*тут рагалось на то, что каждому элементу списка
+                        нужен ключ. почему тогда не ругается на taskForm?*/ />
                         ) : (
                         <Task key={index} task={task} deleteTask={deleteTask} editTaskForm={editTaskForm}/>
                     )

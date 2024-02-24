@@ -10,19 +10,41 @@
     color: white;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
+    font-size: 100%;
 }
 .todoButton{
     border: 2px solid var(--primary-color);
     height: 40px;
-    width: 80px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     color: white;
     background: var(--primary-color);
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
+    font-size: 100%;
 }
 .inputWrapper{
     display: flex;
     justify-content: space-around;
+}
+.editInput{
+    border: 2px solid var(--primary-color);
+    height: 40px;
+    flex: 1;
+    padding: 10px;
+    background: var(--secondary-color);
+    outline: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 100%;
+}
+.editTodoButton{
+    border: 2px solid var(--primary-color);
+    height: 40px;
+    color: white;
+    background: var(--primary-color);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 100%;
 }

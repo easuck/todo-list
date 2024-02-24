@@ -16,11 +16,11 @@ const EditForm : FC<{editTask: (text: string, id: number) => any, task: TaskMode
     return (
         <form onSubmit={handleSubmit}>
             <div className={styles.inputWrapper}>
-                <input className={styles.input} type="text" placeholder="" value={taskText}
+                <input className={styles.editInput} type="text" placeholder="" value={taskText}
                        onChange={(e) => {
                            setTaskText(e.target.value);
                        }}/>
-                <button className={styles.todoButton} type="submit">Save</button>
+                <button className={styles.editTodoButton} type="submit">Save</button>
             </div>
         </form>
     );
