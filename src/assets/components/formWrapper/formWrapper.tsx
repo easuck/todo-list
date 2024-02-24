@@ -1,5 +1,5 @@
 import TaskForm from "../form/taskForm.tsx";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import Task from "../task/task.tsx";
 import styles from './formWrapper.module.css'
 import {TaskModel} from "../task/TaskModel.tsx";
@@ -16,9 +16,9 @@ const FormWrapper = () => {
         setId(id + 1);
     }
 
-    /*const deleteTask = (id) => {
+    const deleteTask = (id: number) => {
         setTasks(tasks.filter((task) => task.id != id));
-    }*/
+    }
 
     return (
         <div className={styles.todoList}>
@@ -26,7 +26,7 @@ const FormWrapper = () => {
             <div className={styles.formWrapper}>
                 <TaskForm addTask={addTask}/>
                 {tasks.map((task, index) => (
-                    <Task key={index} task={task} /*deleteTask={deleteTask}*//>
+                    <Task key={index} task={task} deleteTask={deleteTask}/>
                 ))}
             </div>
         </div>
