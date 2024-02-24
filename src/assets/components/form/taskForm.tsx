@@ -1,13 +1,15 @@
 import styles from './taskForm.module.css';
-import {FC, useState} from 'react';
+import {FC, useEffect, useState} from 'react';
 
-const TaskForm : FC<{addTask: (task: string) => any}> = ({addTask}) => {
-    const [taskText, setTaskText] = useState("");
+const TaskForm : FC<{addTask: (text: string) => void}> = ({addTask}) => {
+    const [taskText, setTaskText] = useState<string>("");
 
     const handleSubmit = (e: any) =>{
         e.preventDefault();
-        addTask(taskText);
-        setTaskText("");
+        if (taskText){
+            addTask(taskText);
+            setTaskText("");
+        }
     }
 
     return (
