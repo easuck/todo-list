@@ -3,12 +3,13 @@ import styles from './task.module.css'
 import {FaPen, FaTrash} from 'react-icons/fa'
 import {TaskModel} from "./TaskModel.tsx";
 
-const Task : FC<{task: TaskModel, deleteTask: (id: number) => any}> = ({task, deleteTask}) => {
+const Task : FC<{task: TaskModel, deleteTask: (id: number) => any, editTaskForm: (id: number) => any}> =
+    ({task, deleteTask, editTaskForm}) => {
     return (
         <div className={styles.task}>
             {task.text}
             <div className={styles.icons}>
-                <FaPen/>
+                <FaPen onClick={() => editTaskForm(task.id)}/>
                 <FaTrash onClick={() => deleteTask(task.id)} /*тут ругалось на ошибку, то что компонент taskForm
                 не может отрендериться, пока рендерится компонент task, я добавил стрелочную функцию и ошибка пропала 0_0*//>
             </div>

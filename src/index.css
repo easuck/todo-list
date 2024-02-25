@@ -2,6 +2,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    background: var(--primary-color);
+}
 :root{
     --secondary-color: #27166e;
     --primary-color: #763dff;
